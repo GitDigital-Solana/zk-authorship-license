@@ -1,0 +1,8 @@
+Output (stdout JSON):
+
+```json
+{
+  "proof": "<hex-encoded Groth16 proof>",
+  "public_inputs": ["<hex author key>", "<hex policy commitment>", "<hex licensee key>"]
+}
+```
