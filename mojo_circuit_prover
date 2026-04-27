@@ -1,0 +1,34 @@
+The Mojo circuit proves:
+
+· The witness contains a valid Ed25519 signature from author_public_key over credential.
+· The credential’s licensee_pubkey equals the public key derived from licensee_private_key.
+· The credential’s policy_commitment matches the public input policy_commitment.
+
+---
+
+5. Groth16 Circuit Description (High-Level)
+
+Public inputs: author_pubkey, policy_commitment, licensee_pubkey
+Private witness: credential, signature, licensee_privkey
+
+Constraints:
+
+1. licensee_pubkey == public_key_derive(licensee_privkey)
+2. credential.licensee_pubkey == licensee_pubkey
+3. credential.policy_commitment == policy_commitment
+4. verify_ed25519(signature, author_pubkey, serialize(credential)) == true
+
+The circuit does not reveal the credential content; only the public ids and policy hash are disclosed. To generate this, you can use a ZK framework like Circom with an Ed25519 gadget, or rely on Mojo’s own constraint system. The exact implementation is outside this document but follows this spec.
+
+---
+
+6. Next Steps & Integration
+
+7. Implement Zig and Mojo tools according to the interfaces above. Place their binaries in a tools/ folder and ensure they’re accessible via PATH.
+8. Configure Ollama with codellama:7b (or a fine-tuned style extractor). Test the style vector extraction on a few code samples.
+9. Run the Tauri app (npm install && npm run tauri dev). The app will create a local SQLite DB, and you can start registering files, issuing licences, and generating proofs.
+10. On-chain integration: Replace the mock post_commitment_to_solana in register.rs with a real Solana transaction that invokes your zk-Identity-masks program. Use the solana-client crate.
+11. Key management: The current code uses mock keys. Integrate a proper key store (OS keychain, or a local encrypted file) and update identity handling.
+
+---
+
