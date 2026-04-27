@@ -1,0 +1,18 @@
+Mojo Prover (mojo-prover)
+
+Input (stdin JSON):
+
+```json
+{
+  "witness": {
+    "credential": { ... LicenseCredential ... },
+    "signature": "<hex signature>",
+    "licensee_private_key": "<hex private key>"
+  },
+  "public_inputs": {
+    "author_public_key": "<hex>",
+    "policy_commitment": "<hex>",
+    "licensee_public_key": "<hex>"
+  }
+}
+```
