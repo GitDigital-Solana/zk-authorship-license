@@ -1,0 +1,4 @@
+The tool must:
+
+· Compute commitment = SHA256( code_hash || serialized_style_vector || author_public_key ).
+· Sign the commitment bytes with the private key (it could receive the private key via an additional env var or file; for now, assume it has access to a key management system).
