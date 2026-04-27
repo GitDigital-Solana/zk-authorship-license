@@ -1,0 +1,34 @@
+Project Directory Tree
+
+```
+zk-authorship-license/
+├── src-tauri/
+│   ├── Cargo.toml
+│   ├── tauri.conf.json
+│   ├── src/
+│   │   ├── main.rs
+│   │   ├── lib.rs
+│   │   ├── commands/
+│   │   │   ├── mod.rs
+│   │   │   ├── register.rs
+│   │   │   ├── license.rs
+│   │   │   └── prove.rs
+│   │   ├── models.rs
+│   │   ├── db.rs
+│   │   ├── ollama.rs
+│   │   └── zig_mojo.rs
+│   └── migrations/
+│       └── 001_initial_schema.sql
+├── src/
+│   ├── index.html
+│   ├── App.tsx
+│   ├── components/
+│   │   ├── AuthorDashboard.tsx
+│   │   ├── LicenseIssuer.tsx
+│   │   └── LicenseVerifier.tsx
+│   ├── vite-env.d.ts
+│   └── main.tsx
+├── package.json
+├── tsconfig.json
+└── README.md
+```
