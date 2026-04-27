@@ -1,0 +1,14 @@
+4. External Tool Interfaces (Specifications)
+
+Zig Commitment Tool (zig-commitment)
+
+Input (stdin JSON):
+
+```json
+{
+  "action": "create_commitment",
+  "code_hash": "<hex-encoded 32-byte hash>",
+  "style_vector": [0.12, -0.45, ...],  // 256 floats
+  "author_public_key": "<hex-encoded 32-byte key>"
+}
+```
