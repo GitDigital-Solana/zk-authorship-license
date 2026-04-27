@@ -1,0 +1,8 @@
+Output (stdout JSON):
+
+```json
+{
+  "commitment": "<hex-encoded commitment>",
+  "signature": "<hex-encoded Ed25519 signature of commitment using author key>"
+}
+```
