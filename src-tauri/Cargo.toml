@@ -1,0 +1,28 @@
+1. Tauri Backend (Rust)
+
+src-tauri/Cargo.toml
+
+```toml
+[package]
+name = "zk-authorship-license"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tauri = { version = "1", features = ["shell-open"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.29", features = ["bundled"] }
+sha2 = "0.10"
+hex = "0.4"
+chrono = { version = "0.4", features = ["serde"] }
+tokio = { version = "1", features = ["full"] }
+solana-client = "1.16"   # adjust version
+solana-sdk = "1.16"
+solana-program = "1.16"
+anyhow = "1"
+thiserror = "1"
+
+[build-dependencies]
+tauri-build = { version = "1", features = [] }
+```
