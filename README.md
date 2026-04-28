@@ -73,3 +73,8 @@ This repo is the foundation of a **privacy‑preserving, verifiable, multi‑org
 - Growth is measurable  
 
 All without exposing raw data.
+
+[![ZK Zero Knowledge](https://img.youtube.com/vi/QI5JsyWSi2U/0.jpg)](https://www.youtube.com/watch?v=QI5JsyWSi2U)
+
+
+[![Proving Authorship](https://img.youtube.com/vi/sVA6Ed8o98I/0.jpg)](https://www.youtube.com/watch?v=sVA6Ed8o98I)
